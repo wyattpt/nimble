@@ -281,7 +281,7 @@ macro_rules! impl_fixed_arr {
                 where
                     R: Read + Unpin + Send,
                 {
-                    let mut arr = ArrayVec::<[T; $len]>::new();
+                    let mut arr = ArrayVec::<T, $len>::new();
 
                     for _ in 0..$len {
                         let value = T::decode_from(config, &mut reader).await?;

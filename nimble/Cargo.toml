@@ -16,11 +16,11 @@ edition = "2021"
 
 [dependencies]
 async-trait = "0.1"
-arrayvec = { version = "0.5", features = ["array-sizes-33-128"] }
+arrayvec = { version = "0.7" }
 futures-util = { version = "0.3", optional = true, features = ["io"] }
 nimble-derive = { path = "../nimble-derive", optional = true }
 thiserror = "1.0"
-tokio = { version = "0.2", optional = true, features = ["io-util"] }
+tokio = { version = "1", optional = true, features = ["io-util"] }
 
 [dev-dependencies]
 rand = "0.7"
